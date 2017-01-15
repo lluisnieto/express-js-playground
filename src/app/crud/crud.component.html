@@ -1,20 +1,27 @@
-<table class="table-striped table-bordered crud-table">
+<table class="table-striped crud-table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Adress</th>
-            <th>Location</th>
+            <th class="col-xs-12 col-sm-3">Name</th>
+            <th class="col-xs-12 col-sm-2">Phone</th>
+            <th class="col-xs-12 col-sm-2">Email</th>
+            <th class="col-xs-12 col-sm-3">Adress</th>
+            <th class="col-xs-12 col-sm-2">Location</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody *ngIf="items">
         <tr *ngFor="let item of items">
-            <td>{{ item.name }}</td>
-            <td>{{ item.phone }}</td>
-            <td>{{ item.email }}</td>
-            <td>{{ item.adress }}</td>
-            <td>Lat: {{ item.location.lat }} Lon: {{ item.location.lon }}</td>
+            <td>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" (click)="removeRegister(item._id)"></span>
+                <input type="text" class="col-xs-12 col-sm-12" [(ngModel)]="item.name" (change)="updateRegs(item)">
+            </td>
+            <td><input type="text" class="col-xs-12 col-sm-12" [(ngModel)]="item.phone"></td>
+            <td><input type="email" class="col-xs-12 col-sm-12" [(ngModel)]="item.email"></td>
+            <td><input type="text" class="col-xs-12 col-sm-12" [(ngModel)]="item.adress"></td>
+            <td>
+                <input type="text" placeholder="Lat" class="col-xs-12 col-sm-6" [(ngModel)]="item.location.lat">
+                <input type="text" placeholder="Lon" class="col-xs-12 col-sm-6" [(ngModel)]="item.location.lon">
+            </td>
         </tr>
     </tbody>
 </table>
+<button class="btn btn-primary pull-right" (click)="addRegister()">Add register</button>

@@ -10,10 +10,10 @@ interface data {
 }
 
 export class Camping implements data {
-    constructor (public name = '',
-                 public phone= '',
-                 public email = '',
-                 public adress = '',
-                 public location = { lat: 0, lon: 0 }
+    constructor (public name = null,
+                 public phone = null,
+                 public email = null,
+                 public adress = null,
+                 public location = { lat: null, lon: null }
     ) {}
 }

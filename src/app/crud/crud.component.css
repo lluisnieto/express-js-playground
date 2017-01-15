@@ -3,4 +3,19 @@
 }
 .crud-table th, .crud-table td {
     padding:5px;
+    position:relative;
+}
+
+.crud-table .glyphicon-remove {
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    font-size: 22px;
+}
+
+.crud-table input[type="text"],
+.crud-table input[type="email"],
+.crud-table input[type="number"] {
+    display:block;
 }
