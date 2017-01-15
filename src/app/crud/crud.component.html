@@ -25,8 +25,8 @@
                     <input type="text" required="true" name="adress_{{ item._id }}" class="col-xs-12 col-sm-12" [(ngModel)]="item.adress" (change)="disableAdd()">
                 </td>
                 <td>
-                    <input type="text" required="true" name="lat_{{ item._id }}" placeholder="Lat" class="col-xs-12 col-sm-6" [(ngModel)]="item.location.lat" (change)="disableAdd()">
-                    <input type="text" required="true" name="lon_{{ item._id }}" placeholder="Lon" class="col-xs-12 col-sm-6" [(ngModel)]="item.location.lon" (change)="disableAdd()">
+                    <input type="text" required="true" name="lat_{{ item._id }}" placeholder="Lat" class="col-xs-12 col-sm-6" pattern="^\d+$" [(ngModel)]="item.location.lat" (change)="disableAdd()">
+                    <input type="text" required="true" name="lon_{{ item._id }}" placeholder="Lon" class="col-xs-12 col-sm-6" pattern="^\d+$" [(ngModel)]="item.location.lon" (change)="disableAdd()">
                 </td>
             </tr>
         </tbody>
