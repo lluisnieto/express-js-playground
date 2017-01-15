@@ -10,6 +10,7 @@ import { Camping } from "../../models/camping.model";
 export class CrudComponent {
 
     private items: Camping[];
+    private flagAddDisabled: boolean = false;
 
     constructor(private service: ApiService){
         this.service.list().subscribe(
@@ -17,23 +18,35 @@ export class CrudComponent {
         );
     }
 
-    addRegister() {
+    disableAdd(): void {
+        this.flagAddDisabled = true;
+    }
+    enableAdd(): void {
+        this.flagAddDisabled = false;
+    }
+
+    addRegister(): void {
         this.service.add().subscribe(
             response => this.items = response
         );
     }
 
-    removeRegister(id) {
+    removeRegister(id): void {
         this.service.remove(id).subscribe(
-            response => this.items = response
+            response => this.items = this.items.filter(function( obj ) {
+                return obj._id !== id;
+            })
         );
     }
 
-    updateRegs(item) {
-        this.service.update(item).subscribe(
-            response => this.items = response
+    updateRegs(e, items): void {
+        e.preventDefault();
+        this.service.update(items).subscribe(
+            function(response){
+                this.items = response;
+            }
         );
+        this.enableAdd();
     }
-
 
 }

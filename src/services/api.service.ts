@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import 'rxjs/add/operator/map';
@@ -22,13 +22,13 @@ export class ApiService {
     public add(): Observable<Camping[]> {
         let emptyReg = new Camping;
         this.http.post(this.apiUrl, emptyReg).subscribe(
-            (response) => console.log('Register sent.')
+            (response) => console.log('Register added.')
         );
 
         return this.list();
     }
 
-    public remove(id): Observable<Camping[]> {
+    public remove(id: string): Observable<Camping[]> {
         let url = this.apiUrl + '/' + id;
         this.http.delete(url).subscribe(
             (response) => console.log('Register deleted.')
@@ -37,11 +37,14 @@ export class ApiService {
         return this.list();
     }
 
-    public update(item): Observable<Camping[]> {
-        let url = this.apiUrl + '/' + item._id;
-        this.http.put(url, item).subscribe(
-            (response) => console.log('Register updated.')
-        );
+    public update(items): Observable<Camping[]> {
+        let url: string;
+        for (let i = 0, len = items.length; i < len; i++) {
+            url = this.apiUrl + '/' + items[i]._id;
+            this.http.put(url, items[i]).subscribe(
+                (response) => console.log('Register "' + items[i]._id + '" updated.')
+            );
+        }
 
         return this.list();
     }

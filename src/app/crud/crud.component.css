@@ -12,6 +12,7 @@
     left: -20px;
     top: 6px;
     font-size: 22px;
+    cursor:pointer;
 }
 
 .crud-table input[type="text"],

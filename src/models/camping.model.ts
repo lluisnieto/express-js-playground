@@ -1,4 +1,5 @@
 interface data {
+    _id: string;
     name: string;
     phone: number;
     email: string;
@@ -10,7 +11,8 @@ interface data {
 }
 
 export class Camping implements data {
-    constructor (public name = null,
+    constructor (public _id = null,
+                 public name = null,
                  public phone = null,
                  public email = null,
                  public adress = null,
