@@ -13,24 +13,24 @@
             <tr *ngFor="let item of items">
                 <td>
                     <span class="glyphicon glyphicon-remove" aria-hidden="true" (click)="removeRegister(item._id)"></span>
-                    <input type="text" required="true" name="name_{{ item._id }}" class="col-xs-12 col-sm-12" [(ngModel)]="item.name" (change)="disableAdd()">
+                    <input type="text" required="true" name="name_{{ item._id }}" class="col-xs-12 col-sm-12 form-control" [(ngModel)]="item.name" (change)="disableAdd()">
                 </td>
                 <td>
-                    <input type="text" required="true" name="phone_{{ item._id }}" class="col-xs-12 col-sm-12" pattern="^\d+$" [(ngModel)]="item.phone" (change)="disableAdd()">
+                    <input type="text" required="true" name="phone_{{ item._id }}" class="col-xs-12 col-sm-12 form-control" pattern="^\d+$" [(ngModel)]="item.phone" (change)="disableAdd()">
                 </td>
                 <td>
-                    <input type="email" required="true" name="email_{{ item._id }}" class="col-xs-12 col-sm-12" [(ngModel)]="item.email" (change)="disableAdd()">
+                    <input type="email" required="true" name="email_{{ item._id }}" class="col-xs-12 col-sm-12 form-control" [(ngModel)]="item.email" (change)="disableAdd()">
                 </td>
                 <td>
-                    <input type="text" required="true" name="adress_{{ item._id }}" class="col-xs-12 col-sm-12" [(ngModel)]="item.adress" (change)="disableAdd()">
+                    <input type="text" required="true" name="adress_{{ item._id }}" class="col-xs-12 col-sm-12 form-control" [(ngModel)]="item.adress" (change)="disableAdd()">
                 </td>
                 <td>
-                    <input type="text" required="true" name="lat_{{ item._id }}" placeholder="Lat" class="col-xs-12 col-sm-6" pattern="^\d+$" [(ngModel)]="item.location.lat" (change)="disableAdd()">
-                    <input type="text" required="true" name="lon_{{ item._id }}" placeholder="Lon" class="col-xs-12 col-sm-6" pattern="^\d+$" [(ngModel)]="item.location.lon" (change)="disableAdd()">
+                    <input type="text" required="true" name="lat_{{ item._id }}" placeholder="Lat" class="col-xs-12 col-sm-6 form-control" pattern="^\d+$" [(ngModel)]="item.location.lat" (change)="disableAdd()">
+                    <input type="text" required="true" name="lon_{{ item._id }}" placeholder="Lon" class="col-xs-12 col-sm-6 form-control" pattern="^\d+$" [(ngModel)]="item.location.lon" (change)="disableAdd()">
                 </td>
             </tr>
         </tbody>
     </table>
-    <button class="btn brn-primary" type="submit">Save data</button>
+    &nbsp;<button class="btn brn-primary" type="submit">Save data</button>
     <button class="btn btn-primary" type="button" (click)="addRegister()" [disabled]="flagAddDisabled">Add register</button>
 </form>

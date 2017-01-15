@@ -1,5 +1,6 @@
 .crud-table {
     width:100%;
+    margin-bottom:10px;
 }
 .crud-table th, .crud-table td {
     padding:5px;
@@ -9,8 +10,8 @@
 .crud-table .glyphicon-remove {
     display: block;
     position: absolute;
-    left: -20px;
-    top: 6px;
+    left: -22px;
+    top: 11px;
     font-size: 22px;
     cursor:pointer;
 }
@@ -19,4 +20,13 @@
 .crud-table input[type="email"],
 .crud-table input[type="number"] {
     display:block;
+}
+
+input[ng-reflect-name^="lat"],
+input[ng-reflect-name^="lon"] {
+    width:calc(50% - 5px);
+    float:left;
+}
+input[ng-reflect-name^="lon"] {
+    float:right;
 }
