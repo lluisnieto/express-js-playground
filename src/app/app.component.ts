@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-
-import { ApiService } from "../services/api.service";
+import {Component, ViewEncapsulation} from '@angular/core';
 
 
 @Component({
@@ -9,18 +7,11 @@ import { ApiService } from "../services/api.service";
     styleUrls: [
         './app.component.css',
         '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-    ]
+    ],
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
 
     private title = 'Camping manager';
-
-    constructor(private service: ApiService){
-        this.service.list().subscribe(
-            response => console.log(response)
-        );
-    }
-
-
 
 }

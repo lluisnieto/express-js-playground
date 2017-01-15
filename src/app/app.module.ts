@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ApiService } from "../services/api.service";
+import { ApiService } from '../services/api.service';
+import { TopbarComponent } from './topbar/topbar.component';
+import { CrudComponent } from "./crud/crud.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopbarComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,

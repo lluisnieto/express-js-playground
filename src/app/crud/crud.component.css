@@ -1,0 +1,6 @@
+.crud-table {
+    width:100%;
+}
+.crud-table th, .crud-table td {
+    padding:5px;
+}
