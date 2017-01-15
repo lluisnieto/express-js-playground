@@ -9,3 +9,4 @@ Installation:
 - Clone repository
 - $ npm install
 - $ npm start
+- Manual rebuild (needs Angular CLI installed globally) -> $ ng build 
