@@ -28,11 +28,9 @@
 5. Discovered node-restful. An auxiliar tool to build and API using ExpressJS and mongoose.
 6. I've Never used Angular-CLI before: Accelerates production, absolutely useful!
 7. Added Twitter Bootsrap for Layout styling into the Angular build.
-8. The frontend side is an Angular2 SPA made of:
-
+8. The frontend side is an Angular2 SPA made of
 - 3 Components: App (main), Topbar and Crud.
-- 1 Model: <Camping>
+- 1 Model: Camping
 - 1 Service: ApiService.
-
 9. Did not have time to workout the performance (minification, tree shaking)
 10. Could not setup commit hook on linter to keep well formed code.
