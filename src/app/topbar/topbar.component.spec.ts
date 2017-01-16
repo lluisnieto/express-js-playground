@@ -1,7 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TopbarComponent } from './topbar.component';
 
@@ -9,7 +7,7 @@ describe('TopbarComponent', () => {
   let component: TopbarComponent;
   let fixture: ComponentFixture<TopbarComponent>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     TestBed.configureTestingModule({
       declarations: [ TopbarComponent ]
     })
@@ -22,7 +20,7 @@ describe('TopbarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create TopbarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
