@@ -17,8 +17,7 @@
 
 ## Known Incompletions
 1. Unit tests: I've been able to setup the environment with a few "out of the box" test working but I've not been able to code my own unit tests. The main problem has been to mock a service method that returns an observable.
-2. No E2E tests so far (let's see tomorrow)
-3. Exercise required to use Gulp: I didn't use it since Angular-CLI solves many of Gulp's goals.
+2. Exercise required to use Gulp: I didn't use it since Angular-CLI solves many of Gulp's goals.
 
 ## Unexpected issues and achievements
 1. I've Never used ExpressJS before but seems to be a minimal/robust tool to work with.
@@ -36,3 +35,4 @@
 
 9. Did not have time to workout the performance (minification, tree shaking)
 10. Could not setup commit hook on linter to keep well formed code.
+11. A couple of E2E tests under CasperJS (need special conf under Win, environtment vars).
