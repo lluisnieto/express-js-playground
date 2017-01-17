@@ -1,5 +1,6 @@
 var fs = require('fs');
 var assertComponents = require('assert-components.js');
+var addRegister = require('add-register.js');
 var host = 'http://localhost:3000/';
 var device = {
     name: 'Windows, Chrome 41',
@@ -16,7 +17,7 @@ var deviceUA = device.casperOptions.userAgent;
 var vw = device.casperOptions.viewportSize.width;
 var vh = device.casperOptions.viewportSize.height;
 
-casper.test.begin('Various Master ASP e2e tests', 1, function suite(test) {
+casper.test.begin('Various Master ASP e2e tests', 2, function suite(test) {
 
     // setup casper run
     casper.start(host);
@@ -38,7 +39,14 @@ casper.test.begin('Various Master ASP e2e tests', 1, function suite(test) {
         this.echo('****** jQuery: '+jqueryVer);
         this.echo('*************************************************************');
 
+        // Courtesy capture
+        this.capture('foo.jpg', undefined, {
+            format: 'jpg',
+            quality: 75
+        });
+
         assertComponents(this, test);
+        addRegister(this, test);
     });
 
     casper.run(function () {
