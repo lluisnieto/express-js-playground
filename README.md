@@ -1,5 +1,38 @@
 # Express JS / Angular2
 
+## Description
+
+Create a basic CRUD with an simple API Rest from scratch without using any framework but express.js
+
+Base Camping Model:
+- name
+- phone
+- email
+- address
+- location: { lat, lon}
+
+Backend:
+
+Create, read, modify and delete registers on camping’s model. Use at least the following technology:
+
+- https://nodejs.org
+- http://expressjs.com
+
+Frontend:
+
+Create a frontend app that communicates with the previously generated API rest Basic functionality is creating a reports, search, append, delete and edit.
+
+Use at least the following technology:
+
+- https://angularjs.org
+- http://gulpjs.com/
+
+Bonus Point:
+
+Use any database (preferable mongodb) as a persistence layer.
+Create a frontend production model using Gulp automation an http://pugjs.org/ technology.
+Unit and functional testing.
+
 ## Requirements
 
 - MongoDB service up and running.
