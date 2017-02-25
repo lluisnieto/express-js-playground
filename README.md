@@ -44,6 +44,7 @@ Unit and functional testing.
 - Clone repository
 - $ npm install
 - $ npm start
+- $ casperjs test e2e/casperjs_tests/test-suite.js
 
 
 - Manual rebuild (needs Angular CLI installed globally) -> $ ng build
